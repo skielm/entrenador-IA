@@ -122,7 +122,16 @@ tr:last-child td{border-bottom:none;}
 .supp-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;margin-bottom:1px;}
 .supp-desc{font-size:12px;color:var(--blanco-suave);}
 @media(max-width:480px){.hero-title{font-size:32px;}.stats-grid{gap:7px;}.stat-value{font-size:18px;}}
-</style></head><body><div class="hero"><div style="max-width:680px;margin:0 auto;">
+</style>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Plan Ezequiel">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0f0f0f">
+<link rel="manifest" href="data:application/json;charset=utf-8,%7B%22name%22%3A%22Plan+Ezequiel+90+D%C3%ADas%22%2C%22short_name%22%3A%22Plan+Ezequiel%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230f0f0f%22%2C%22theme_color%22%3A%22%230f0f0f%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADsQAAA7EB9YPtSQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZxivdrEAAASZSURBVHic7d1NaBNBGMbxZ5JNNrGJjR9Rq6LVg6d6EBQUvHgQBKEnD56KJx%2BLiF48eBBEEMGDJ08%2BeBRBEMGDB0EEQTx5EBER0YMnT%2F4HQRA8ePDgwYMgggcPHjx48CDIQw8ePHjw4EGQhx48ePDgwYMgDz148ODBgwdBHnrw4MGDBw%2BCPPTgwYMHDx4EeejBgwcPHjwI8tCDBw8ePAjy0IMHDx48eBDkoQcPHjx48CDIQw8ePHjw4EGQhx48ePDgwYMgDz148ODBgwdBHnrw4MGDBw%2BCPPTgwYMHDx4EeejBgwcPHjwI8tCDBw8ePAjy0IMHDx48eBDkoQcPHjx48CDIQw8ePHjw4EGQhx48ePDgwYMgDz148ODBgwdBHnrw4MGDBw%2BCPPTgwYMHDx4EeejBgwcPHjwI8tCDBw8ePAjy0IMHDx48eBDkoQcPHjx48CDIR%2F%2F%2BAw%3D%3D%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
+
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiB2aWV3Qm94PSIwIDAgMTgwIDE4MCI+PHJlY3Qgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxODAiIHJ4PSIyMCIgZmlsbD0iIzBmMGYwZiIvPjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iNiIgeT0iODciIGZpbGw9IiNlNjM5NDYiLz48dGV4dCB4PSI5MCIgeT0iNzUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZTYzOTQ2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FWjwvdGV4dD48dGV4dCB4PSI5MCIgeT0iMTI1IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2Y0YTI2MSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+OTAgRMONQVM8L3RleHQ+PC9zdmc+">
+</head><body><div class="hero"><div style="max-width:680px;margin:0 auto;">
 <div class="hero-label">Plan personalizado · 3 meses · 6 días/semana</div>
 <div class="hero-title">EZEQUIEL<br><span>PLAN 90 DÍAS</span></div>
 <div class="hero-sub">Objetivo: 27% → ≤12% grasa · Preservar y construir masa muscular</div>
@@ -3006,4 +3015,28 @@ function toggleAlt(id) {
   const el = document.getElementById(id);
   if(el) el.classList.toggle('open');
 }
-</script></body></html>
+</script>
+<script>
+// Register service worker for PWA if supported
+if ('serviceWorker' in navigator) {
+  const swCode = `
+self.addEventListener('install', e => {
+  e.waitUntil(
+    caches.open('plan-ez-v1').then(cache => {
+      return cache.addAll([location.href]);
+    })
+  );
+  self.skipWaiting();
+});
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    caches.match(e.request).then(r => r || fetch(e.request))
+  );
+});
+`;
+  const blob = new Blob([swCode], {type: 'application/javascript'});
+  const swUrl = URL.createObjectURL(blob);
+  navigator.serviceWorker.register(swUrl).catch(()=>{});
+}
+</script>
+</body></html>
