@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan 3 Meses — Ezequiel</title>
+<title>Plan Pro — Ezequiel</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap');
 :root{--negro:#0f0f0f;--carbon:#1a1a1a;--gris-oscuro:#242424;--gris-medio:#3a3a3a;--gris-linea:#2e2e2e;--blanco:#f5f5f5;--blanco-suave:#b0b0b0;--rojo:#e63946;--rojo-oscuro:#b5222d;--naranja:#f4a261;--verde:#2a9d8f;--azul:#457b9d;}
@@ -121,6 +121,61 @@ tr:last-child td{border-bottom:none;}
 .supp-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px;}
 .supp-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;margin-bottom:1px;}
 .supp-desc{font-size:12px;color:var(--blanco-suave);}
+/* ===== PRO LAYER ===== */
+.hoy-head{background:var(--gris-oscuro);border:1px solid var(--gris-linea);border-left:4px solid var(--rojo);border-radius:8px;padding:14px 16px;margin-bottom:12px;}
+.hoy-kicker{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blanco-suave);}
+.hoy-title{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:800;line-height:1.05;margin:2px 0 4px;}
+.hoy-title span{color:var(--rojo);}
+.hoy-sub{font-size:13px;color:var(--blanco-suave);}
+.cyc-bar{display:flex;gap:4px;margin-top:10px;}
+.cyc-dot{flex:1;height:6px;border-radius:3px;background:var(--gris-medio);}
+.cyc-dot.done{background:var(--verde);}.cyc-dot.now{background:var(--rojo);}
+.blk-bar{display:flex;gap:2px;margin-top:8px;}
+.blk-seg{flex:1;height:4px;border-radius:2px;background:var(--gris-medio);}
+.blk-seg.done{background:#5a5a5a;}.blk-seg.now{background:var(--naranja);}.blk-seg.dl{outline:1px dashed #777;}
+.log-ex{background:var(--gris-oscuro);border:1px solid var(--gris-linea);border-radius:8px;padding:12px;margin-bottom:10px;}
+.log-ex.ss{border-left:3px solid var(--naranja);}
+.log-top{display:flex;align-items:flex-start;gap:8px;}
+.log-n{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--rojo);min-width:20px;}
+.log-name{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;line-height:1.2;}
+.log-presc{font-size:12px;color:var(--blanco-suave);margin-top:2px;}
+.log-tech{margin-left:auto;background:none;border:1px solid var(--gris-medio);color:var(--blanco-suave);border-radius:4px;font-size:11px;padding:3px 7px;cursor:pointer;white-space:nowrap;}
+.log-hint{margin:8px 0 6px;font-size:12px;padding:7px 9px;border-radius:5px;background:rgba(69,123,157,.12);color:#9cc7e0;}
+.log-hint b{color:#cfe6f3;}
+.log-hint.up{background:rgba(42,157,143,.12);color:#7de8de;}.log-hint.up b{color:#bff5ef;}
+.log-hint.dl{background:rgba(244,162,97,.12);color:#f4c79c;}
+.log-last{font-size:11px;color:var(--blanco-suave);margin-bottom:6px;}
+.set-row{display:grid;grid-template-columns:28px 1fr 1fr 1fr 34px;gap:6px;align-items:center;margin-bottom:5px;}
+.set-row.hdr{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--blanco-suave);margin-bottom:3px;}
+.set-lbl{font-family:'Barlow Condensed',sans-serif;font-weight:700;color:var(--blanco-suave);text-align:center;}
+.set-row input{width:100%;min-width:0;background:var(--carbon);border:1px solid var(--gris-medio);color:var(--blanco);border-radius:5px;padding:8px 6px;font-size:16px;font-family:'Barlow',sans-serif;text-align:center;}
+.set-row input:focus{outline:none;border-color:var(--rojo);}
+.set-ok{width:34px;height:34px;border-radius:6px;border:1px solid var(--gris-medio);background:var(--carbon);color:var(--blanco-suave);font-size:15px;cursor:pointer;}
+.set-ok.on{background:var(--verde);border-color:var(--verde);color:white;}
+.swap-sel{width:100%;margin-top:8px;background:var(--carbon);border:1px solid var(--gris-medio);color:var(--blanco-suave);border-radius:5px;padding:6px;font-size:13px;}
+.btn{display:block;width:100%;padding:14px;border:none;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer;margin-top:10px;}
+.btn-main{background:var(--rojo);color:white;}.btn-main:disabled{opacity:.4;}
+.btn-sec{background:var(--gris-medio);color:var(--blanco);}
+.btn-ghost{background:none;border:1px solid var(--gris-medio);color:var(--blanco-suave);font-size:13px;padding:10px;}
+.mini-link{background:none;border:none;color:var(--blanco-suave);text-decoration:underline;font-size:12px;cursor:pointer;padding:6px 0;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.form-grid label{font-size:11px;color:var(--blanco-suave);display:block;}
+.form-grid input{width:100%;margin-top:3px;background:var(--carbon);border:1px solid var(--gris-medio);color:var(--blanco);border-radius:5px;padding:9px 8px;font-size:16px;font-family:'Barlow',sans-serif;}
+.chart-wrap{margin:6px 0 4px;}
+.chart-head{display:flex;justify-content:space-between;align-items:baseline;}
+.chart-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;}
+.chart-val{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;}
+.chart-delta{font-size:12px;margin-left:6px;}
+.delta-good{color:#3ecfbf;}.delta-bad{color:#ff6b75;}
+.chart-svg{width:100%;height:70px;display:block;}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--verde);color:white;padding:10px 16px;border-radius:20px;font-size:14px;z-index:200;opacity:0;transition:opacity .25s;pointer-events:none;}
+.toast.show{opacity:1;}
+.done-banner{background:rgba(42,157,143,.1);border:1px solid rgba(42,157,143,.3);border-radius:8px;padding:14px;margin-bottom:12px;color:#7de8de;font-size:14px;}
+.done-banner b{color:#bff5ef;}
+.hist-row{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px solid var(--gris-linea);}
+.hist-row:last-child{border-bottom:none;}
+.hist-row span:last-child{color:var(--blanco-suave);}
+
 @media(max-width:480px){.hero-title{font-size:32px;}.stats-grid{gap:7px;}.stat-value{font-size:18px;}}
 </style>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -132,55 +187,66 @@ tr:last-child td{border-bottom:none;}
 
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiB2aWV3Qm94PSIwIDAgMTgwIDE4MCI+PHJlY3Qgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxODAiIHJ4PSIyMCIgZmlsbD0iIzBmMGYwZiIvPjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iNiIgeT0iODciIGZpbGw9IiNlNjM5NDYiLz48dGV4dCB4PSI5MCIgeT0iNzUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZTYzOTQ2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FWjwvdGV4dD48dGV4dCB4PSI5MCIgeT0iMTI1IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2Y0YTI2MSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+OTAgRMONQVM8L3RleHQ+PC9zdmc+">
 </head><body><div class="hero"><div style="max-width:680px;margin:0 auto;">
-<div class="hero-label">Plan personalizado · 3 meses · 6 días/semana</div>
-<div class="hero-title">EZEQUIEL<br><span>PLAN 90 DÍAS</span></div>
-<div class="hero-sub">Objetivo: 27% → ≤12% grasa · Preservar y construir masa muscular</div>
+<div class="hero-label">Plan personalizado · bloques de 14 ciclos · 6 sesiones por ciclo</div>
+<div class="hero-title">EZEQUIEL<br><span>PLAN PRO</span></div>
+<div class="hero-sub">Bloque 1: 25.9% → ~18% grasa · Meta final ≤12% · Sin perder músculo</div>
 <div class="stats-grid">
-<div class="stat-box stat-now"><div class="stat-label">Ahora</div><div class="stat-value">27<span class="stat-unit">%</span></div><div class="stat-detail">75.3 kg</div><div class="stat-detail" style="margin-top:3px"><span class="diff-badge">▲ 9.9%</span></div></div>
+<div class="stat-box stat-now"><div class="stat-label">Ahora</div><div class="stat-value" id="hero-now-bf">25.9<span class="stat-unit">%</span></div><div class="stat-detail" id="hero-now-kg">76.1 kg</div><div class="stat-detail" style="margin-top:3px"><span class="diff-badge" id="hero-now-diff">▲ 15.3%</span></div></div>
 <div class="stat-box stat-best"><div class="stat-label">Tu récord</div><div class="stat-value">10.6<span class="stat-unit">%</span></div><div class="stat-detail">66.3 kg · jul 2024</div><div class="stat-detail" style="margin-top:3px"><span class="diff-badge pos">✓ BEST</span></div></div>
-<div class="stat-box stat-goal"><div class="stat-label">Objetivo</div><div class="stat-value">≤12<span class="stat-unit">%</span></div><div class="stat-detail">~66 kg</div><div class="stat-detail" style="margin-top:3px"><span class="diff-badge" style="background:#7a4a00">META</span></div></div>
+<div class="stat-box stat-goal"><div class="stat-label">Bloque 1</div><div class="stat-value">~18<span class="stat-unit">%</span></div><div class="stat-detail">~70 kg · final ≤12%</div><div class="stat-detail" style="margin-top:3px"><span class="diff-badge" style="background:#7a4a00">META</span></div></div>
 </div></div></div><nav class="nav">
-<button class="nav-btn active" onclick="showSection('overview')">📊 Resumen</button>
-<button class="nav-btn" onclick="showSection('mes1')">MES 1</button>
-<button class="nav-btn" onclick="showSection('mes2')">MES 2</button>
-<button class="nav-btn" onclick="showSection('mes3')">MES 3</button>
-<button class="nav-btn" onclick="showSection('dieta')">🥩 Dieta</button>
-<button class="nav-btn" onclick="showSection('suplementos')">💊 Suplementos</button>
-</nav><div id="overview" class="section active">
+<button class="nav-btn active" data-sec="hoy" onclick="showSection('hoy')">🔥 Hoy</button>
+<button class="nav-btn" data-sec="progreso" onclick="showSection('progreso')">📈 Progreso</button>
+<button class="nav-btn" data-sec="overview" onclick="showSection('overview')">📊 Plan</button>
+<button class="nav-btn" data-sec="mes1" onclick="showSection('mes1')">FASE 1</button>
+<button class="nav-btn" data-sec="mes2" onclick="showSection('mes2')">FASE 2</button>
+<button class="nav-btn" data-sec="mes3" onclick="showSection('mes3')">FASE 3</button>
+<button class="nav-btn" data-sec="dieta" onclick="showSection('dieta')">🥩 Dieta</button>
+<button class="nav-btn" data-sec="suplementos" onclick="showSection('suplementos')">💊 Suplementos</button>
+</nav><div id="hoy" class="section active"><div id="hoy-root"></div></div>
+<div id="progreso" class="section"><div id="prog-root"></div></div>
+<div id="overview" class="section">
 <div class="section-title">La estrategia</div>
-<div class="alert"><strong>Importante:</strong> Al finalizar cada mes hacete un InBody y compartilo acá para ajustar el plan con datos reales.</div>
-<div class="card"><div class="card-header"><div class="card-icon icon-rojo">🗓</div><div><div class="card-title">Estructura de los 3 meses</div></div></div>
+<div class="alert alert-verde"><strong>Cómo funciona:</strong> las sesiones van numeradas y en orden (S1 → S6, después un día de descanso). Si faltás un día no se pierde nada: al volver hacés la que te tocaba. Un <b>ciclo</b> = 6 sesiones. El registro está en la pestaña 🔥 Hoy.</div>
+<div class="card"><div class="card-header"><div class="card-icon icon-rojo">🗓</div><div><div class="card-title">Estructura del bloque (14 ciclos)</div></div></div>
 <div class="table-wrap"><table>
-<tr><th>Mes</th><th>Foco</th><th>kcal</th><th>Cardio</th><th>Target grasa</th></tr>
-<tr><td><span class="tag tag-rojo">MES 1</span></td><td>Base + déficit agresivo</td><td>~2.000</td><td>2 HIIT + 2 LISS</td><td>27%→21%</td></tr>
-<tr><td><span class="tag tag-naranja">MES 2</span></td><td>Hipertrofia + déficit moderado</td><td>~2.200</td><td>1 HIIT + 2 LISS</td><td>21%→16%</td></tr>
-<tr><td><span class="tag tag-verde">MES 3</span></td><td>Definición final + superseries</td><td>~2.400</td><td>1 HIIT + 2 LISS</td><td>16%→≤12%</td></tr>
+<tr><th>Ciclos</th><th>Foco</th><th>kcal</th><th>Cardio</th><th>Target grasa</th></tr>
+<tr><td><span class="tag tag-rojo">1–4</span></td><td>Fase 1 · Base + déficit</td><td>~2.000</td><td>1 HIIT + 2 LISS</td><td>26%→23%</td></tr><tr><td><span class="tag tag-gris">5</span></td><td>Descarga (2 series, RIR 3–4)</td><td>~2.000</td><td>2 LISS</td><td>—</td></tr>
+<tr><td><span class="tag tag-naranja">6–9</span></td><td>Fase 2 · Hipertrofia + déficit</td><td>~2.050</td><td>1 HIIT + 2 LISS</td><td>23%→20%</td></tr><tr><td><span class="tag tag-gris">10</span></td><td>Descarga</td><td>~2.050</td><td>2 LISS</td><td>—</td></tr>
+<tr><td><span class="tag tag-verde">11–14</span></td><td>Fase 3 · Superseries + ciclado</td><td>~2.100 / 1.900</td><td>1 HIIT + 2 LISS</td><td>20%→~18%</td></tr>
 </table></div></div>
-<div class="card"><div class="card-header"><div class="card-icon icon-verde">⚡</div><div><div class="card-title">Semana tipo Push/Pull/Legs</div></div></div>
+<div class="card"><div class="card-header"><div class="card-icon icon-verde">⚡</div><div><div class="card-title">Ciclo Push/Pull/Legs</div></div></div>
 <div class="table-wrap"><table>
-<tr><th>Día</th><th>Sesión</th><th>Músculos principales</th></tr>
-<tr><td>LUN</td><td><span class="tag tag-rojo">PUSH A</span></td><td>Pecho plano/bajo · Hombro ant. · Tríceps long.</td></tr>
-<tr><td>MAR</td><td><span class="tag tag-azul">PULL A</span></td><td>Espalda ancha · Espalda media · Rear delt · Bíceps</td></tr>
-<tr><td>MIÉ</td><td><span class="tag tag-verde">LEGS A</span></td><td>Cuádriceps · Femoral · Pantorrilla gemelo</td></tr>
-<tr><td>JUE</td><td><span class="tag tag-rojo">PUSH B</span></td><td>Pecho alto/forma · Hombro lateral · Tríceps med/lat</td></tr>
-<tr><td>VIE</td><td><span class="tag tag-azul">PULL B</span></td><td>Espalda grosor · Serrato · Rear delt · Bíceps braquial</td></tr>
-<tr><td>SÁB</td><td><span class="tag tag-verde">LEGS B</span></td><td>Peso muerto · Glúteo · Femoral · Aductores · Sóleo</td></tr>
-<tr><td>DOM</td><td><span class="tag tag-gris">DESCANSO</span></td><td>Recuperación activa opcional</td></tr>
+<tr><th>Nº</th><th>Sesión</th><th>Músculos principales</th></tr>
+<tr><td>S1</td><td><span class="tag tag-rojo">PUSH A</span></td><td>Pecho plano/bajo · Hombro ant. · Tríceps long.</td></tr>
+<tr><td>S2</td><td><span class="tag tag-azul">PULL A</span></td><td>Espalda ancha · Espalda media · Rear delt · Bíceps</td></tr>
+<tr><td>S3</td><td><span class="tag tag-verde">LEGS A</span></td><td>Cuádriceps · Femoral · Pantorrilla gemelo</td></tr>
+<tr><td>S4</td><td><span class="tag tag-rojo">PUSH B</span></td><td>Pecho alto/forma · Hombro lateral · Tríceps med/lat</td></tr>
+<tr><td>S5</td><td><span class="tag tag-azul">PULL B</span></td><td>Espalda grosor · Serrato · Rear delt · Bíceps braquial</td></tr>
+<tr><td>S6</td><td><span class="tag tag-verde">LEGS B</span></td><td>Peso muerto · Glúteo · Femoral · Aductores · Sóleo</td></tr>
+<tr><td>—</td><td><span class="tag tag-gris">DESCANSO</span></td><td>Después de S6. Caminata larga opcional</td></tr>
 </table></div>
 <div style="margin-top:10px;font-size:12px;color:var(--blanco-suave);"><strong style="color:var(--blanco);">Lógica A/B:</strong> Push A = pecho plano/fuerza base → Push B = pecho alto/forma. No se repiten ejercicios. La semana cubre el músculo completo.</div></div>
-<div class="card"><div class="card-header"><div class="card-icon icon-naranja">📉</div><div><div class="card-title">Calorías por mes</div><div class="card-subtitle">TMB 1711 · AMR 3251 kcal</div></div></div>
-<div class="progress-bar-wrap"><div class="progress-label"><span>Mes 1 — 2.000 kcal</span><span>Déficit ~1.250</span></div><div class="progress-bar"><div class="progress-fill" style="width:62%;background:var(--rojo);"></div></div></div>
-<div class="progress-bar-wrap"><div class="progress-label"><span>Mes 2 — 2.200 kcal</span><span>Déficit ~1.050</span></div><div class="progress-bar"><div class="progress-fill" style="width:68%;background:var(--naranja);"></div></div></div>
-<div class="progress-bar-wrap"><div class="progress-label"><span>Mes 3 — 2.400 kcal días entreno</span><span>Déficit ~850</span></div><div class="progress-bar"><div class="progress-fill" style="width:74%;background:var(--verde);"></div></div></div>
+<div class="card"><div class="card-header"><div class="card-icon icon-naranja">📉</div><div><div class="card-title">Calorías por mes</div><div class="card-subtitle">TMB ~1.590 · Gasto estimado ~2.550 kcal (recalculado con tu masa magra)</div></div></div>
+<div class="progress-bar-wrap"><div class="progress-label"><span>Fase 1 — 2.000 kcal</span><span>Déficit ~550</span></div><div class="progress-bar"><div class="progress-fill" style="width:62%;background:var(--rojo);"></div></div></div>
+<div class="progress-bar-wrap"><div class="progress-label"><span>Fase 2 — 2.050 kcal</span><span>Déficit ~500</span></div><div class="progress-bar"><div class="progress-fill" style="width:68%;background:var(--naranja);"></div></div></div>
+<div class="progress-bar-wrap"><div class="progress-label"><span>Fase 3 — 2.100 entreno / 1.900 descanso</span><span>Déficit ~500</span></div><div class="progress-bar"><div class="progress-fill" style="width:74%;background:var(--verde);"></div></div></div>
+<div style="margin-top:10px;font-size:12px;color:var(--blanco-suave);"><strong style="color:var(--blanco);">Ajuste:</strong> si en 3 semanas la cintura no bajó, recortá ~150 kcal o sumá 2.000 pasos diarios. Ritmo esperado: 0,4–0,6 kg por semana.</div></div>
+<div class="card"><div class="card-header"><div class="card-icon icon-azul">📈</div><div><div class="card-title">Reglas de progresión</div></div></div>
+<div class="tip"><span class="tip-icon">1️⃣</span><span><b>Doble progresión:</b> cada ejercicio tiene un rango (ej. 8–10). Cuando completás todas las series en el tope del rango, subís el peso (+2,5 kg tren superior, +5 kg sentadilla, peso muerto, prensa e hip thrust). Si no, mismo peso y buscás +1 rep.</span></div>
+<div class="tip"><span class="tip-icon">🎯</span><span><b>RIR</b> = reps que te quedaron en reserva. Básicos a RIR 1–2, accesorios a RIR 0–1. La app te sugiere el peso de cada día.</span></div>
+<div class="tip"><span class="tip-icon">🧘</span><span><b>Descarga</b> en los ciclos 5 y 10: mismos ejercicios, 2 series, –10% de peso, RIR 3–4. En déficit es lo que te deja seguir progresando.</span></div>
+<div class="tip"><span class="tip-icon">🔁</span><span><b>Bloques:</b> al terminar el ciclo 14 la app arma el bloque siguiente rotando los accesorios por sus alternativas. Los básicos quedan para medir tu progreso.</span></div>
+<div class="tip"><span class="tip-icon">🚶</span><span><b>Pasos:</b> 8.000–10.000 por día. Es lo que más mueve la grasa visceral fuera del gimnasio.</span></div>
 </div></div><div id="mes1" class="section">
-<div class="section-title">MES 1 — Base y déficit agresivo</div>
-<div class="tip" style="margin-bottom:12px;"><span class="tip-icon">📌</span><span>Series: 3–4 · Reps: 10–15 · Descanso: 60–90 seg · Técnica limpia. 2.000 kcal/día.</span></div>
+<div class="section-title">FASE 1 · Ciclos 1–4 — Base y déficit</div>
+<div class="tip" style="margin-bottom:12px;"><span class="tip-icon">📌</span><span>Series: 3–4 · Reps: 10–15 · Descanso: 60–90 seg · Técnica limpia. 2.000 kcal/día. Ciclo 5 = descarga.</span></div>
 
-<div class="subnav" id="subnav-mes1"><button class="subnav-btn  active" onclick="showDay('mes1','push-a')">LUN · Push A</button> <button class="subnav-btn pull" onclick="showDay('mes1','pull-a')">MAR · Pull A</button> <button class="subnav-btn legs" onclick="showDay('mes1','legs-a')">MIÉ · Legs A</button> <button class="subnav-btn " onclick="showDay('mes1','push-b')">JUE · Push B</button> <button class="subnav-btn pull" onclick="showDay('mes1','pull-b')">VIE · Pull B</button> <button class="subnav-btn legs" onclick="showDay('mes1','legs-b')">SÁB · Legs B</button></div>
+<div class="subnav" id="subnav-mes1"><button class="subnav-btn  active" onclick="showDay('mes1','push-a')">S1 · Push A</button> <button class="subnav-btn pull" onclick="showDay('mes1','pull-a')">S2 · Pull A</button> <button class="subnav-btn legs" onclick="showDay('mes1','legs-a')">S3 · Legs A</button> <button class="subnav-btn " onclick="showDay('mes1','push-b')">S4 · Push B</button> <button class="subnav-btn pull" onclick="showDay('mes1','pull-b')">S5 · Pull B</button> <button class="subnav-btn legs" onclick="showDay('mes1','legs-b')">S6 · Legs B</button></div>
 <div id="mes1-push-a" class="day-section  active"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--rojo);">PUSH A</div>
-<div><div class="day-name">Lunes — Pecho plano/bajo · Hombro anterior · Tríceps cabeza larga</div><div class="day-focus">Fuerza base. Press plano como movimiento principal.</div></div>
+<div><div class="day-name">Sesión 1 — Pecho plano/bajo · Hombro anterior · Tríceps cabeza larga</div><div class="day-focus">Fuerza base. Press plano como movimiento principal.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-rojo">Pecho</span> <span class="tag tag-naranja">Hombro ant.</span> <span class="tag tag-gris">Tríceps</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">PECHO</div><div class="divider-line"></div></div><div class="ex-item" id="ex1">
@@ -336,7 +402,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes1-pull-a" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--azul);">PULL A</div>
-<div><div class="day-name">Martes — Espalda ancha · Espalda media · Rear delt · Bíceps</div><div class="day-focus">Dominadas y remo como base. Énfasis en ancho de espalda.</div></div>
+<div><div class="day-name">Sesión 2 — Espalda ancha · Espalda media · Rear delt · Bíceps</div><div class="day-focus">Dominadas y remo como base. Énfasis en ancho de espalda.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-azul">Espalda</span> <span class="tag tag-naranja">Rear delt</span> <span class="tag tag-gris">Bíceps</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">ESPALDA ANCHA</div><div class="divider-line"></div></div><div class="ex-item" id="ex7">
@@ -467,7 +533,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes1-legs-a" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--verde);">LEGS A</div>
-<div><div class="day-name">Miércoles — Cuádriceps · Femoral posterior · Pantorrilla gemelo</div><div class="day-focus">Sentadilla como base. Énfasis en cuádriceps.</div></div>
+<div><div class="day-name">Sesión 3 — Cuádriceps · Femoral posterior · Pantorrilla gemelo</div><div class="day-focus">Sentadilla como base. Énfasis en cuádriceps.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-verde">Cuádriceps</span> <span class="tag tag-verde">Femoral</span> <span class="tag tag-gris">Pantorrilla</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">CUÁDRICEPS — ÉNFASIS</div><div class="divider-line"></div></div><div class="ex-item" id="ex12">
@@ -598,7 +664,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes1-push-b" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--rojo);">PUSH B</div>
-<div><div class="day-name">Jueves — Pecho alto/forma · Hombro lateral · Tríceps medial/lateral</div><div class="day-focus">Completa Push A. Pecho alto y deltoides lateral que el lunes no fue el foco.</div></div>
+<div><div class="day-name">Sesión 4 — Pecho alto/forma · Hombro lateral · Tríceps medial/lateral</div><div class="day-focus">Completa Push A. Pecho alto y deltoides lateral que el lunes no fue el foco.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-rojo">Pecho alto</span> <span class="tag tag-naranja">Deltoides lateral</span> <span class="tag tag-gris">Tríceps</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">PECHO ALTO Y FORMA</div><div class="divider-line"></div></div><div class="ex-item" id="ex17">
@@ -754,7 +820,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes1-pull-b" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--azul);">PULL B</div>
-<div><div class="day-name">Viernes — Espalda grosor · Serrato · Bíceps braquial · Rear delt</div><div class="day-focus">Completa Pull A. Grosor y profundidad de espalda. Jalón neutro.</div></div>
+<div><div class="day-name">Sesión 5 — Espalda grosor · Serrato · Bíceps braquial · Rear delt</div><div class="day-focus">Completa Pull A. Grosor y profundidad de espalda. Jalón neutro.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-azul">Espalda grosor</span> <span class="tag tag-azul">Serrato</span> <span class="tag tag-gris">Bíceps</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">ESPALDA — GROSOR Y PROFUNDIDAD</div><div class="divider-line"></div></div><div class="ex-item" id="ex23">
@@ -910,7 +976,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes1-legs-b" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--verde);">LEGS B</div>
-<div><div class="day-name">Sábado — Peso muerto · Femoral · Glúteo · Aductores · Pantorrilla sóleo</div><div class="day-focus">Énfasis en cadena posterior y glúteo. Peso muerto como movimiento rey.</div></div>
+<div><div class="day-name">Sesión 6 — Peso muerto · Femoral · Glúteo · Aductores · Pantorrilla sóleo</div><div class="day-focus">Énfasis en cadena posterior y glúteo. Peso muerto como movimiento rey.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-verde">Femoral</span> <span class="tag tag-verde">Glúteo</span> <span class="tag tag-verde">Aductores</span> <span class="tag tag-gris">Pantorrilla</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">CADENA POSTERIOR — PESO MUERTO</div><div class="divider-line"></div></div><div class="ex-item" id="ex29">
@@ -1039,17 +1105,17 @@ tr:last-child td{border-bottom:none;}
 </div>
 </div>
 </div></div>
-<div class="card" style="margin-top:16px;"><div class="card-header"><div class="card-icon icon-rojo">🏃</div><div><div class="card-title">Cardio — Mes 1</div><div class="card-subtitle">3–4 sesiones / semana · Nunca después de Legs</div></div></div>
-<div class="table-wrap"><table><tr><th>Tipo</th><th>Frec.</th><th>Duración</th><th>Cuándo</th></tr><tr><td><span class="tag tag-rojo">HIIT</span></td><td>2x/sem</td><td>20 min</td><td style="color:var(--blanco-suave);font-size:12px;">30 seg máx / 90 seg recuperación. Después de Push o Pull.</td></tr><tr><td><span class="tag tag-verde">LISS</span></td><td>2x/sem</td><td>35–45 min</td><td style="color:var(--blanco-suave);font-size:12px;">Caminata rápida o bici 60–65% FC máx. Ideal en ayunas.</td></tr></table></div><div style="margin-top:8px;font-size:12px;color:var(--blanco-suave);">FC máx estimada: ~184 bpm · LISS target: 110–120 bpm · HIIT picos: 160–175 bpm</div></div>
+<div class="card" style="margin-top:16px;"><div class="card-header"><div class="card-icon icon-rojo">🏃</div><div><div class="card-title">Cardio — Mes 1</div><div class="card-subtitle">3 sesiones por ciclo · Nunca después de Legs · + pasos diarios</div></div></div>
+<div class="table-wrap"><table><tr><th>Tipo</th><th>Frec.</th><th>Duración</th><th>Cuándo</th></tr><tr><td><span class="tag tag-rojo">HIIT</span></td><td>1x/sem</td><td>20 min</td><td style="color:var(--blanco-suave);font-size:12px;">30 seg máx / 90 seg recuperación. Después de Push o Pull.</td></tr><tr><td><span class="tag tag-verde">LISS</span></td><td>2x/sem</td><td>35–45 min</td><td style="color:var(--blanco-suave);font-size:12px;">Caminata rápida o bici 60–65% FC máx. En ayunas o no, da igual: hacelo cuando te quede cómodo.</td></tr></table></div><div style="margin-top:8px;font-size:12px;color:var(--blanco-suave);">FC máx estimada: ~184 bpm · LISS target: 110–120 bpm · HIIT picos: 160–175 bpm</div></div>
 </div><div id="mes2" class="section">
-<div class="section-title">MES 2 — Hipertrofia + Definición moderada</div>
+<div class="section-title">FASE 2 · Ciclos 6–9 — Hipertrofia + Definición moderada</div>
 <div class="tip" style="margin-bottom:12px;"><span class="tip-icon">📌</span><span>Series: 3–4 · Reps: 8–12 · Pesos más altos · Drop sets y rest-pause. 2.200 kcal/día.</span></div>
 <div class="alert alert-verde"><strong>Drop set:</strong> Al terminar el último set, sin descanso bajás el 30% del peso y hacés reps al fallo. <strong>Rest-pause:</strong> hacés reps, descansás 10 seg sin soltar, continuás.</div>
-<div class="subnav" id="subnav-mes2"><button class="subnav-btn  active" onclick="showDay('mes2','push-a')">LUN · Push A</button> <button class="subnav-btn pull" onclick="showDay('mes2','pull-a')">MAR · Pull A</button> <button class="subnav-btn legs" onclick="showDay('mes2','legs-a')">MIÉ · Legs A</button> <button class="subnav-btn " onclick="showDay('mes2','push-b')">JUE · Push B</button> <button class="subnav-btn pull" onclick="showDay('mes2','pull-b')">VIE · Pull B</button> <button class="subnav-btn legs" onclick="showDay('mes2','legs-b')">SÁB · Legs B</button></div>
+<div class="subnav" id="subnav-mes2"><button class="subnav-btn  active" onclick="showDay('mes2','push-a')">S1 · Push A</button> <button class="subnav-btn pull" onclick="showDay('mes2','pull-a')">S2 · Pull A</button> <button class="subnav-btn legs" onclick="showDay('mes2','legs-a')">S3 · Legs A</button> <button class="subnav-btn " onclick="showDay('mes2','push-b')">S4 · Push B</button> <button class="subnav-btn pull" onclick="showDay('mes2','pull-b')">S5 · Pull B</button> <button class="subnav-btn legs" onclick="showDay('mes2','legs-b')">S6 · Legs B</button></div>
 <div id="mes2-push-a" class="day-section  active"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--rojo);">PUSH A</div>
-<div><div class="day-name">Lunes — Pecho con mancuernas · Hombro anterior · Tríceps</div><div class="day-focus">Mes 2: mancuernas reemplazan la barra para mayor rango. Pesos más altos.</div></div>
+<div><div class="day-name">Sesión 1 — Pecho con mancuernas · Hombro anterior · Tríceps</div><div class="day-focus">Mes 2: mancuernas reemplazan la barra para mayor rango. Pesos más altos.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-rojo">Pecho</span> <span class="tag tag-naranja">Hombro ant.</span> <span class="tag tag-gris">Tríceps</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">PECHO — MÁS RANGO CON MANCUERNAS</div><div class="divider-line"></div></div><div class="ex-item" id="ex34">
@@ -1205,7 +1271,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes2-pull-a" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--azul);">PULL A</div>
-<div><div class="day-name">Martes — Dominadas lastradas · Remo pesado · Rest-pause bíceps</div><div class="day-focus">Mes 2: dominadas con peso extra. Rest-pause en bíceps.</div></div>
+<div><div class="day-name">Sesión 2 — Dominadas lastradas · Remo pesado · Rest-pause bíceps</div><div class="day-focus">Mes 2: dominadas con peso extra. Rest-pause en bíceps.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-azul">Espalda</span> <span class="tag tag-naranja">Rear delt</span> <span class="tag tag-gris">Bíceps</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">ESPALDA ANCHA — MÁS CARGA</div><div class="divider-line"></div></div><div class="ex-item" id="ex40">
@@ -1361,7 +1427,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes2-legs-a" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--verde);">LEGS A</div>
-<div><div class="day-name">Miércoles — Sentadilla con pausa · Hack squat · Femoral sentado</div><div class="day-focus">Mes 2: pausa 2 seg abajo en sentadilla. Mayor tensión sin más peso.</div></div>
+<div><div class="day-name">Sesión 3 — Sentadilla con pausa · Hack squat · Femoral sentado</div><div class="day-focus">Mes 2: pausa 2 seg abajo en sentadilla. Mayor tensión sin más peso.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-verde">Cuádriceps</span> <span class="tag tag-verde">Femoral</span> <span class="tag tag-verde">Glúteo</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">CUÁDRICEPS — TIEMPO BAJO TENSIÓN</div><div class="divider-line"></div></div><div class="ex-item" id="ex46">
@@ -1517,7 +1583,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes2-push-b" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--rojo);">PUSH B</div>
-<div><div class="day-name">Jueves — Press inclinado pesado · Press Arnold · Laterales drop set</div><div class="day-focus">Mes 2: Push B más pesado. Press Arnold. Drop set en laterales.</div></div>
+<div><div class="day-name">Sesión 4 — Press inclinado pesado · Press Arnold · Laterales drop set</div><div class="day-focus">Mes 2: Push B más pesado. Press Arnold. Drop set en laterales.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-rojo">Pecho alto</span> <span class="tag tag-naranja">Deltoides</span> <span class="tag tag-gris">Tríceps</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">PECHO ALTO — MÁS PESADO</div><div class="divider-line"></div></div><div class="ex-item" id="ex52">
@@ -1673,7 +1739,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes2-pull-b" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--azul);">PULL B</div>
-<div><div class="day-name">Viernes — Jalón neutro pesado · Remo apoyado · Curl banco inclinado</div><div class="day-focus">Mes 2: jalón y remo más pesados. Curl inclinado para mayor rango de bíceps.</div></div>
+<div><div class="day-name">Sesión 5 — Jalón neutro pesado · Remo apoyado · Curl banco inclinado</div><div class="day-focus">Mes 2: jalón y remo más pesados. Curl inclinado para mayor rango de bíceps.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-azul">Espalda</span> <span class="tag tag-azul">Serrato</span> <span class="tag tag-gris">Bíceps</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">ESPALDA — MÁS CARGA</div><div class="divider-line"></div></div><div class="ex-item" id="ex58">
@@ -1829,7 +1895,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes2-legs-b" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--verde);">LEGS B</div>
-<div><div class="day-name">Sábado — Peso muerto pesado · Hip thrust pausa · Búlgara pausa</div><div class="day-focus">Mes 2: peso muerto más pesado. Pausa 2 seg en hip thrust y búlgara.</div></div>
+<div><div class="day-name">Sesión 6 — Peso muerto pesado · Hip thrust pausa · Búlgara pausa</div><div class="day-focus">Mes 2: peso muerto más pesado. Pausa 2 seg en hip thrust y búlgara.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-verde">Femoral</span> <span class="tag tag-verde">Glúteo</span> <span class="tag tag-verde">Aductores</span></div>
 </div><div class="divider"><div class="divider-line"></div><div class="divider-label">PESO MUERTO — MÁS PESADO</div><div class="divider-line"></div></div><div class="ex-item" id="ex64">
@@ -1984,16 +2050,16 @@ tr:last-child td{border-bottom:none;}
 </div>
 </div></div>
 <div class="card" style="margin-top:16px;"><div class="card-header"><div class="card-icon icon-rojo">🏃</div><div><div class="card-title">Cardio — Mes 2</div><div class="card-subtitle">3 sesiones / semana</div></div></div>
-<div class="table-wrap"><table><tr><th>Tipo</th><th>Frec.</th><th>Duración</th><th>Cuándo</th></tr><tr><td><span class="tag tag-rojo">HIIT</span></td><td>1x/sem</td><td>20 min</td><td style="color:var(--blanco-suave);font-size:12px;">Después de Push o Pull. Nunca después de Legs.</td></tr><tr><td><span class="tag tag-verde">LISS</span></td><td>2x/sem</td><td>40–50 min</td><td style="color:var(--blanco-suave);font-size:12px;">Mañana en ayunas — máxima oxidación de grasa.</td></tr></table></div></div>
+<div class="table-wrap"><table><tr><th>Tipo</th><th>Frec.</th><th>Duración</th><th>Cuándo</th></tr><tr><td><span class="tag tag-rojo">HIIT</span></td><td>1x/sem</td><td>20 min</td><td style="color:var(--blanco-suave);font-size:12px;">Después de Push o Pull. Nunca después de Legs.</td></tr><tr><td><span class="tag tag-verde">LISS</span></td><td>2x/sem</td><td>40–50 min</td><td style="color:var(--blanco-suave);font-size:12px;">Cuando te quede cómodo. Lo que cuenta es el gasto total del día.</td></tr></table></div></div>
 </div><div id="mes3" class="section">
-<div class="section-title">MES 3 — Definición final · Superseries</div>
+<div class="section-title">FASE 3 · Ciclos 11–14 — Definición final · Superseries</div>
 <div class="tip" style="margin-bottom:12px;"><span class="tip-icon">📌</span><span>Superseries agonista-antagonista · Pesos similares al mes 2 · Ciclado de carbos. 2.400 kcal días entreno.</span></div>
 <div class="alert alert-verde"><strong>Superserie (SS):</strong> Los ejercicios marcados con SS se hacen en pareja sin descanso entre ellos. Eso cuenta como 1 serie. Luego descansás 75 seg. Mayor densidad calórica, más quema, misma carga muscular.</div>
-<div class="subnav" id="subnav-mes3"><button class="subnav-btn  active" onclick="showDay('mes3','push-a')">LUN · Push A</button> <button class="subnav-btn pull" onclick="showDay('mes3','pull-a')">MAR · Pull A</button> <button class="subnav-btn legs" onclick="showDay('mes3','legs-a')">MIÉ · Legs A</button> <button class="subnav-btn " onclick="showDay('mes3','push-b')">JUE · Push B</button> <button class="subnav-btn pull" onclick="showDay('mes3','pull-b')">VIE · Pull B</button> <button class="subnav-btn legs" onclick="showDay('mes3','legs-b')">SÁB · Legs B</button></div>
+<div class="subnav" id="subnav-mes3"><button class="subnav-btn  active" onclick="showDay('mes3','push-a')">S1 · Push A</button> <button class="subnav-btn pull" onclick="showDay('mes3','pull-a')">S2 · Pull A</button> <button class="subnav-btn legs" onclick="showDay('mes3','legs-a')">S3 · Legs A</button> <button class="subnav-btn " onclick="showDay('mes3','push-b')">S4 · Push B</button> <button class="subnav-btn pull" onclick="showDay('mes3','pull-b')">S5 · Pull B</button> <button class="subnav-btn legs" onclick="showDay('mes3','legs-b')">S6 · Legs B</button></div>
 <div id="mes3-push-a" class="day-section  active"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--rojo);">PUSH A</div>
-<div><div class="day-name">Lunes — Pecho · Hombro · Tríceps · Superseries</div><div class="day-focus">SS = ambos ejercicios sin descanso entre ellos. Descansar 75 seg después.</div></div>
+<div><div class="day-name">Sesión 1 — Pecho · Hombro · Tríceps · Superseries</div><div class="day-focus">SS = ambos ejercicios sin descanso entre ellos. Descansar 75 seg después.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-rojo">Pecho</span> <span class="tag tag-naranja">Hombro</span> <span class="tag tag-gris">Tríceps</span></div>
 </div><div class="alert alert-verde"><strong>Superserie (SS):</strong> Los ejercicios marcados con 🔴SS🔴 se hacen en pareja sin descanso. Terminás el primer ejercicio e inmediatamente empezás el segundo. Después de los dos descansás 75 seg. El objetivo es mayor densidad calórica.</div><div class="divider"><div class="divider-line"></div><div class="divider-label">SS-A · PECHO — FUERZA + CONTRACCIÓN</div><div class="divider-line"></div></div><div class="ex-item" id="ex70">
@@ -2149,7 +2215,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes3-pull-a" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--azul);">PULL A</div>
-<div><div class="day-name">Martes — Espalda · Rear delt · Bíceps · Superseries</div><div class="day-focus">Superseries para mayor densidad. Bíceps individual al final.</div></div>
+<div><div class="day-name">Sesión 2 — Espalda · Rear delt · Bíceps · Superseries</div><div class="day-focus">Superseries para mayor densidad. Bíceps individual al final.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-azul">Espalda</span> <span class="tag tag-naranja">Rear delt</span> <span class="tag tag-gris">Bíceps</span></div>
 </div><div class="alert alert-verde"><strong>Superserie (SS):</strong> Hacés el par sin descanso. 75 seg de descanso después del par completo.</div><div class="divider"><div class="divider-line"></div><div class="divider-label">SS-A · DOMINADAS + FACE PULLS</div><div class="divider-line"></div></div><div class="ex-item" id="ex76">
@@ -2305,7 +2371,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes3-legs-a" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--verde);">LEGS A</div>
-<div><div class="day-name">Miércoles — Cuádriceps · Femoral · Glúteo · Superseries</div><div class="day-focus">Sentadilla con pausa 3 seg. Superseries para mayor densidad calórica.</div></div>
+<div><div class="day-name">Sesión 3 — Cuádriceps · Femoral · Glúteo · Superseries</div><div class="day-focus">Sentadilla con pausa 3 seg. Superseries para mayor densidad calórica.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-verde">Cuádriceps</span> <span class="tag tag-verde">Femoral</span> <span class="tag tag-verde">Glúteo</span></div>
 </div><div class="alert alert-verde"><strong>Superserie (SS):</strong> Hacés el par sin descanso. 75 seg de descanso después del par completo.</div><div class="divider"><div class="divider-line"></div><div class="divider-label">SS-A · CUÁDRICEPS — PAUSA + EXTENSIÓN</div><div class="divider-line"></div></div><div class="ex-item" id="ex82">
@@ -2461,7 +2527,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes3-push-b" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--rojo);">PUSH B</div>
-<div><div class="day-name">Jueves — Pecho alto · Hombro · Tríceps · Superseries</div><div class="day-focus">Superseries complementan el Push A del lunes con ángulos distintos.</div></div>
+<div><div class="day-name">Sesión 4 — Pecho alto · Hombro · Tríceps · Superseries</div><div class="day-focus">Superseries complementan el Push A del lunes con ángulos distintos.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-rojo">Pecho alto</span> <span class="tag tag-naranja">Deltoides</span> <span class="tag tag-gris">Tríceps</span></div>
 </div><div class="alert alert-verde"><strong>Superserie (SS):</strong> Hacés el par sin descanso. 75 seg de descanso después del par completo.</div><div class="divider"><div class="divider-line"></div><div class="divider-label">SS-A · PECHO ALTO — PRESS + CONTRACCIÓN</div><div class="divider-line"></div></div><div class="ex-item" id="ex88">
@@ -2617,7 +2683,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes3-pull-b" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--azul);">PULL B</div>
-<div><div class="day-name">Viernes — Espalda grosor · Serrato · Bíceps variante · Superseries</div><div class="day-focus">Completa el Pull A. Jalón neutro + rear delt en superserie.</div></div>
+<div><div class="day-name">Sesión 5 — Espalda grosor · Serrato · Bíceps variante · Superseries</div><div class="day-focus">Completa el Pull A. Jalón neutro + rear delt en superserie.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-azul">Espalda</span> <span class="tag tag-azul">Serrato</span> <span class="tag tag-gris">Bíceps</span></div>
 </div><div class="alert alert-verde"><strong>Superserie (SS):</strong> Hacés el par sin descanso. 75 seg de descanso después del par completo.</div><div class="divider"><div class="divider-line"></div><div class="divider-label">SS-A · ESPALDA GROSOR + SERRATO</div><div class="divider-line"></div></div><div class="ex-item" id="ex94">
@@ -2773,7 +2839,7 @@ tr:last-child td{border-bottom:none;}
 </div></div><div id="mes3-legs-b" class="day-section"><div class="day-header">
 <div class="day-header-top">
 <div class="day-badge" style="color:var(--verde);">LEGS B</div>
-<div><div class="day-name">Sábado — Peso muerto · Glúteo · Femoral · Aductores · LISS post</div><div class="day-focus">El peso muerto va primero y solo. Todo lo demás en superseries. LISS al terminar.</div></div>
+<div><div class="day-name">Sesión 6 — Peso muerto · Glúteo · Femoral · Aductores · LISS post</div><div class="day-focus">El peso muerto va primero y solo. Todo lo demás en superseries. LISS al terminar.</div></div>
 </div>
 <div class="day-pills"><span class="tag tag-verde">Femoral</span> <span class="tag tag-verde">Glúteo</span> <span class="tag tag-verde">Aductores</span></div>
 </div><div class="alert alert-verde"><strong>Orden del día:</strong> Primero el peso muerto solo (fresco y pesado). Después las superseries. Al terminar la sesión, LISS 30–40 min (caminata o bici).</div><div class="divider"><div class="divider-line"></div><div class="divider-label">PESO MUERTO — PRIMERO Y SOLO</div><div class="divider-line"></div></div><div class="ex-item" id="ex100">
@@ -2928,12 +2994,12 @@ tr:last-child td{border-bottom:none;}
 </div>
 </div></div>
 <div class="card" style="margin-top:16px;"><div class="card-header"><div class="card-icon icon-rojo">🏃</div><div><div class="card-title">Cardio — Mes 3</div><div class="card-subtitle">3 sesiones / semana · LISS prioridad</div></div></div>
-<div class="table-wrap"><table><tr><th>Tipo</th><th>Frec.</th><th>Duración</th><th>Cuándo</th></tr><tr><td><span class="tag tag-rojo">HIIT</span></td><td>1x/sem</td><td>15–20 min</td><td style="color:var(--blanco-suave);font-size:12px;">Máximo 1 vez. Después de Push o Pull.</td></tr><tr><td><span class="tag tag-verde">LISS</span></td><td>2x/sem</td><td>40–45 min</td><td style="color:var(--blanco-suave);font-size:12px;">Mañana en ayunas + post Legs B sábado (caminata 30 min).</td></tr></table></div></div><div class="card" style="margin-top:12px;"><div class="card-header"><div class="card-icon icon-verde">🔄</div><div><div class="card-title">Ciclado de carbos — Mes 3</div></div></div>
+<div class="table-wrap"><table><tr><th>Tipo</th><th>Frec.</th><th>Duración</th><th>Cuándo</th></tr><tr><td><span class="tag tag-rojo">HIIT</span></td><td>1x/sem</td><td>15–20 min</td><td style="color:var(--blanco-suave);font-size:12px;">Máximo 1 vez. Después de Push o Pull.</td></tr><tr><td><span class="tag tag-verde">LISS</span></td><td>2x/sem</td><td>40–45 min</td><td style="color:var(--blanco-suave);font-size:12px;">1 libre + post Legs B (caminata 30 min).</td></tr></table></div></div><div class="card" style="margin-top:12px;"><div class="card-header"><div class="card-icon icon-verde">🔄</div><div><div class="card-title">Ciclado de carbos — Mes 3</div></div></div>
 <div class="table-wrap"><table>
 <tr><th>Tipo de día</th><th>Carbs</th><th>Proteína</th><th>Grasas</th><th>kcal</th></tr>
-<tr><td><span class="tag tag-verde">Día entreno (Lun–Sáb)</span></td><td>200–220g</td><td>180–200g</td><td>60g</td><td>~2.400</td></tr>
-<tr><td><span class="tag tag-gris">Día descanso (Dom)</span></td><td>80–100g</td><td>200g</td><td>70g</td><td>~2.100</td></tr>
-<tr><td><span class="tag tag-rojo">Día bajo (1×/sem)</span></td><td>50g</td><td>220g</td><td>60g</td><td>~1.700</td></tr>
+<tr><td><span class="tag tag-verde">Día de sesión</span></td><td>180–200g</td><td>180g</td><td>55g</td><td>~2.100</td></tr>
+<tr><td><span class="tag tag-gris">Día de descanso</span></td><td>120g</td><td>180g</td><td>65g</td><td>~1.900</td></tr>
+<tr><td><span class="tag tag-naranja">Refeed (si hace falta)</span></td><td>280g</td><td>180g</td><td>50g</td><td>~2.300</td></tr>
 </table></div></div>
 <div class="alert" style="margin-top:8px;"><strong>Alerta mes 3:</strong> Si perdés más del 15% de fuerza en compuestos de forma sostenida, hacé un refeed 3–4 días con +150–200 kcal en carbos. El músculo manda.</div>
 </div><div id="dieta" class="section"><div class="section-title">Plan de alimentación</div>
@@ -2950,21 +3016,21 @@ tr:last-child td{border-bottom:none;}
 <div class="tl-item"><div class="tl-dot" style="background:#e63946;"></div><div class="tl-hora">7:00 hs · Desayuno</div><div class="tl-titulo">Comida 1 — Alta en proteína</div><div class="tl-desc"><b>Opción A:</b> 1 huevo + 4 claras + 30g queso light + 1 feta jamón + 2 galletas de arroz + infusión.<br><b>Opción B:</b> Panqueques proteicos: 1 huevo + 3 claras + 30g harina almendras + 50g avena + edulcorante + 100g frutos rojos.<br><b>Siempre:</b> 2 cdas semillas de lino activadas.</div></div>
 <div class="tl-item"><div class="tl-dot" style="background:#f4a261;"></div><div class="tl-hora">10:30 hs · Media mañana</div><div class="tl-titulo">Comida 2 — Snack</div><div class="tl-desc">½ banana + 2–3 nueces + mate o café. Alt: 150g yogurt griego + 1 cda chia + canela.</div></div>
 <div class="tl-item"><div class="tl-dot" style="background:#f1c40f;"></div><div class="tl-hora">13:00 hs · Almuerzo = PRE-ENTRENO</div><div class="tl-titulo">Comida 3 — Tu combustible</div><div class="tl-desc"><b>200–220g carne roja magra</b> a la plancha + <b>150–170g arroz cocido</b> + ensalada libre + <b>1 cda aceite de oliva</b> o <b>½ palta.</b></div></div>
-<div class="tl-item"><div class="tl-dot" style="background:#e63946;"></div><div class="tl-hora">14:30 hs · ENTRENO</div><div class="tl-titulo">Durante</div><div class="tl-desc"><b>BCAA 2 scoops</b> en la botella. Agua abundante.</div></div>
+<div class="tl-item"><div class="tl-dot" style="background:#e63946;"></div><div class="tl-hora">14:30 hs · ENTRENO</div><div class="tl-titulo">Durante</div><div class="tl-desc">Agua abundante. Los BCAA no hacen falta: con 180 g de proteína ya están cubiertos.</div></div>
 <div class="tl-item"><div class="tl-dot" style="background:#2a9d8f;"></div><div class="tl-hora">~17:00 hs · Post-entreno</div><div class="tl-titulo">Comida 4 — Shake</div><div class="tl-desc"><b>1 scoop Whey HOCH</b> + <b>5g Creatina</b> en 250ml agua o leche de almendras.</div></div>
 <div class="tl-item"><div class="tl-dot" style="background:#457b9d;"></div><div class="tl-hora">18:30 hs · Merienda</div><div class="tl-titulo">Comida 5 — Liviana</div><div class="tl-desc">200g yogurt griego + 30g granola sin azúcar + chia · o panqueques proteicos · o 4–5 claras + 2 galletas de arroz.</div></div>
 <div class="tl-item"><div class="tl-dot" style="background:#9b59b6;"></div><div class="tl-hora">20:30 hs · Cena</div><div class="tl-titulo">Comida 6 — Proteína + vegetales, sin arroz</div><div class="tl-desc"><b>200g carne / pollo / cerdo</b> a la plancha + <b>100g batata</b> o brócoli/zapallito al vapor + ensalada verde + 1 cda aceite oliva.</div></div>
 </div></div>
-<div class="card"><div class="card-header"><div class="card-icon icon-naranja">🚫</div><div><div class="card-title">Prohibido siempre</div></div></div>
-<div class="tip"><span class="tip-icon">❌</span><span>Alcohol, azúcar, harinas refinadas, pan, facturas, galletitas comunes.</span></div>
-<div class="tip"><span class="tip-icon">❌</span><span>Remolacha, choclo, papa (solo batata en cena con moderación).</span></div>
-<div class="tip"><span class="tip-icon">❌</span><span>Rebozados, fritos, milanesas empanadas.</span></div>
-<div class="tip"><span class="tip-icon">✅</span><span><b>4 litros de agua</b> por día. Café negro pre-cardio en ayunas.</span></div>
+<div class="card"><div class="card-header"><div class="card-icon icon-naranja">🚫</div><div><div class="card-title">Limitar (regla 80/20)</div></div></div>
+<div class="tip"><span class="tip-icon">⚠️</span><span><b>Alcohol:</b> es lo que más pega en la grasa visceral. Ideal cero; como máximo una salida por semana y sin pasarte.</span></div>
+<div class="tip"><span class="tip-icon">⚠️</span><span><b>Azúcar, facturas, galletitas, harinas blancas:</b> ocasional, no diario. Papa y choclo sí, contados dentro de los carbos del almuerzo.</span></div>
+<div class="tip"><span class="tip-icon">⚠️</span><span><b>Fritos y rebozados:</b> 1 vez por semana como mucho. Milanesa al horno sí.</span></div>
+<div class="tip"><span class="tip-icon">✅</span><span><b>3–4 litros de agua</b> por día. Café negro antes del cardio si te sirve. Si comés afuera, priorizá proteína + verdura y seguís.</span></div>
 </div></div><div id="suplementos" class="section"><div class="section-title">Suplementación</div>
 <div class="card"><div class="card-header"><div class="card-icon icon-rojo">💊</div><div><div class="card-title">Stack completo</div></div></div>
 <div class="supp-item"><div class="supp-dot" style="background:#7ab4d4;"></div><div><div class="supp-name">Whey HOCH — 1 scoop</div><div class="supp-desc">Post-entreno (~17 hs). Completar los 180g de proteína diaria.</div></div></div>
 <div class="supp-item"><div class="supp-dot" style="background:#f4a261;"></div><div><div class="supp-name">Creatina monohidrato — 5g/día</div><div class="supp-desc">En el shake post-entreno. Días sin gym: en el desayuno. <strong>Todos los días sin excepción.</strong></div></div></div>
-<div class="supp-item"><div class="supp-dot" style="background:#3ecfbf;"></div><div><div class="supp-name">BCAA — 2 scoops</div><div class="supp-desc">Durante el entrenamiento (14:30–16:30). Reduce catabolismo en déficit.</div></div></div>
+<div class="supp-item"><div class="supp-dot" style="background:#3ecfbf;"></div><div><div class="supp-name" style="text-decoration:line-through;opacity:.6">BCAA — sacado</div><div class="supp-desc">Con 180 g de proteína diaria no aportan nada extra. Esa plata va mejor a whey u omega-3.</div></div></div>
 <div class="supp-item"><div class="supp-dot" style="background:#9b59b6;"></div><div><div class="supp-name">ZMA/ZMAB — 4 comprimidos</div><div class="supp-desc">Antes de dormir, estómago vacío, separado del calcio. Sueño + recuperación.</div></div></div>
 <div class="supp-item"><div class="supp-dot" style="background:#e63946;"></div><div><div class="supp-name">Chia activada — 2 cdas/día</div><div class="supp-desc">Desayuno y cena. Remojar en heladera la noche anterior.</div></div></div>
 <div class="supp-item"><div class="supp-dot" style="background:#f1c40f;"></div><div><div class="supp-name">Semillas de lino — 2 cdas</div><div class="supp-desc">Desayuno. Activar en agua la noche anterior.</div></div></div>
@@ -2975,68 +3041,421 @@ tr:last-child td{border-bottom:none;}
 <tr><th>Hora</th><th>Suplemento</th></tr>
 <tr><td>7:00 hs</td><td>Lino activado + chia (con desayuno)</td></tr>
 <tr><td>13:00 hs</td><td>Vitamina D3+K2 (con el almuerzo)</td></tr>
-<tr><td>14:30 hs</td><td>BCAA 2 scoops (durante el entreno)</td></tr>
+<tr><td>14:30 hs</td><td>Entreno — solo agua</td></tr>
 <tr><td>~17:00 hs</td><td>Whey 1 scoop + Creatina 5g (post-entreno)</td></tr>
 <tr><td>22:30 hs</td><td>ZMAB 4 comprimidos (antes de dormir)</td></tr>
 </table></div></div>
 <div class="card"><div class="card-header"><div class="card-icon icon-verde">📅</div><div><div class="card-title">Seguimiento mensual</div></div></div>
-<div class="tip"><span class="tip-icon">📊</span><span>InBody al finalizar cada mes. Compartilo acá y ajustamos con datos reales.</span></div>
+<div class="tip"><span class="tip-icon">📊</span><span>Balanza cada 2 semanas en ayunas + cintura con cinta a la altura del ombligo. Cargalo en 📈 Progreso.</span></div>
 <div class="tip"><span class="tip-icon">📸</span><span>Fotos cada 2 semanas (frente, perfil, espalda) en las mismas condiciones.</span></div>
-<div class="tip"><span class="tip-icon">🎯</span><span>Targets: Mes 1 → ~21% · Mes 2 → ~16% · Mes 3 → ≤12%.</span></div>
+<div class="tip"><span class="tip-icon">🎯</span><span>Targets bloque 1: ciclo 4 → ~23% · ciclo 9 → ~20% · ciclo 14 → ~18%.</span></div>
 </div></div>
 <script>
+/* ================= NAV (original behaviour, by data-sec) ================= */
 function showSection(id) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  const ids = ['overview','mes1','mes2','mes3','dieta','suplementos'];
-  const idx = ids.indexOf(id);
-  if(idx>=0) document.querySelectorAll('.nav-btn')[idx].classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('active', b.dataset.sec === id));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  if (id === 'hoy') renderHoy();
+  if (id === 'progreso') renderProg();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showDay(mes, day) {
   const sec = document.getElementById(mes);
   sec.querySelectorAll('.day-section').forEach(d => d.classList.remove('active'));
-  const t = document.getElementById(mes+'-'+day);
-  if(t) t.classList.add('active');
-  const sn = document.getElementById('subnav-'+mes);
-  if(sn) {
+  const t = document.getElementById(mes + '-' + day);
+  if (t) t.classList.add('active');
+  const sn = document.getElementById('subnav-' + mes);
+  if (sn) {
     sn.querySelectorAll('.subnav-btn').forEach(b => b.classList.remove('active'));
-    const days=['push-a','pull-a','legs-a','push-b','pull-b','legs-b'];
-    const idx=days.indexOf(day);
-    if(idx>=0) sn.querySelectorAll('.subnav-btn')[idx].classList.add('active');
+    const idx = SESS.indexOf(day);
+    if (idx >= 0) sn.querySelectorAll('.subnav-btn')[idx].classList.add('active');
   }
 }
-function toggleEx(id) {
-  const el = document.getElementById(id);
-  if(el) el.classList.toggle('open');
+function toggleEx(id) { const el = document.getElementById(id); if (el) el.classList.toggle('open'); }
+function toggleAlt(id) { const el = document.getElementById(id); if (el) el.classList.toggle('open'); }
+
+/* ================= CONSTANTS ================= */
+const SESS = ['push-a', 'pull-a', 'legs-a', 'push-b', 'pull-b', 'legs-b'];
+const SESS_LBL = ['Push A', 'Pull A', 'Legs A', 'Push B', 'Pull B', 'Legs B'];
+const SESS_COLOR = ['var(--rojo)', 'var(--azul)', 'var(--verde)', 'var(--rojo)', 'var(--azul)', 'var(--verde)'];
+const CYCLES = 14, PER = 6, BLOCK_LEN = CYCLES * PER;
+const RECORD_BF = 10.6;
+const KEY = 'ezq-pro-v1';
+const SEED = { block: 1, sessions: [], measures: [{ date: '2026-10-12', peso: 76.1, grasa: 25.9, visceral: 12, musculo: 29.3, cintura: null }], swaps: {}, draft: null };
+
+function phaseOf(c) {
+  if (c <= 4) return { mes: 'mes1', dl: false, name: 'Fase 1 · Base' };
+  if (c === 5) return { mes: 'mes1', dl: true, name: 'Descarga' };
+  if (c <= 9) return { mes: 'mes2', dl: false, name: 'Fase 2 · Hipertrofia' };
+  if (c === 10) return { mes: 'mes2', dl: true, name: 'Descarga' };
+  return { mes: 'mes3', dl: false, name: 'Fase 3 · Superseries' };
 }
-function toggleAlt(id) {
-  const el = document.getElementById(id);
-  if(el) el.classList.toggle('open');
+
+/* ================= STORAGE ================= */
+let S;
+function load() {
+  try { const raw = localStorage.getItem(KEY); S = raw ? JSON.parse(raw) : null; } catch (e) { S = null; }
+  if (!S) S = JSON.parse(JSON.stringify(SEED));
+  ['sessions', 'measures'].forEach(k => { if (!Array.isArray(S[k])) S[k] = []; });
+  if (!S.swaps) S.swaps = {};
+  if (!S.block) S.block = 1;
 }
-</script>
-<script>
-// Register service worker for PWA if supported
-if ('serviceWorker' in navigator) {
-  const swCode = `
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open('plan-ez-v1').then(cache => {
-      return cache.addAll([location.href]);
-    })
-  );
-  self.skipWaiting();
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { toast('No se pudo guardar en este navegador'); } }
+
+/* ================= HELPERS ================= */
+const pad = n => String(n).padStart(2, '0');
+function today() { const d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+function fmtDate(s) { const [y, m, d] = s.split('-'); return d + '/' + m; }
+function daysBetween(a, b) { return Math.round((new Date(b + 'T12:00') - new Date(a + 'T12:00')) / 864e5); }
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+function toast(msg) {
+  let t = document.getElementById('toast');
+  if (!t) { t = document.createElement('div'); t.id = 'toast'; t.className = 'toast'; document.body.appendChild(t); }
+  t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2200);
+}
+function normKey(name) {
+  return name.replace(/^SS-[A-Z]\s*·\s*/i, '')
+    .replace(/\s*\((más pesado|primero|finalizador|de pie)\)/gi, '')
+    .replace(/\s*[—-]\s*(más pesado|más carga)\s*$/i, '')
+    .replace(/\s+(más pesado|más carga)\s*$/i, '')
+    .trim().toLowerCase();
+}
+function cleanName(name) { return name.replace(/^SS-[A-Z]\s*·\s*/i, '').trim(); }
+function parsePresc(meta) {
+  const m = meta.match(/(\d+)\s*×\s*(\d+)(?:\s*[–-]\s*(\d+))?/);
+  if (!m) return { sets: 3, lo: 10, hi: 12 };
+  const sets = +m[1], lo = +m[2], hi = m[3] ? +m[3] : +m[2];
+  return { sets, lo, hi: hi === lo ? lo + 2 : hi, fixed: hi === lo };
+}
+function incFor(name) {
+  return /sentadilla(?! búlgara| goblet| sumo)|peso muerto(?! rumano)|prensa|leg press|hack squat|hip thrust|\bRDL\b|romanian/i.test(name) ? 5 : 2.5;
+}
+const round05 = x => Math.round(x * 2) / 2;
+
+/* ================= READ PLAN FROM THE PAGE ================= */
+function sessionExercises(mes, sessIdx) {
+  const sec = document.getElementById(mes + '-' + SESS[sessIdx]);
+  if (!sec) return [];
+  return [...sec.querySelectorAll('.ex-item')].map((el, i) => {
+    const name = el.querySelector('.ex-name').textContent.trim();
+    const metaEl = el.querySelector('.ex-meta');
+    const meta = metaEl.textContent.trim();
+    const metaShort = meta.split('·').slice(0, 2).join('·').trim();
+    const alts = [...el.querySelectorAll('.alt-nombre')].map(a => a.textContent.trim());
+    const ss = /^SS-/i.test(name) || /sin descanso/.test(meta);
+    return { id: el.id, i, name, meta: metaShort, presc: parsePresc(meta), alts, ss, main: i === 0 };
+  });
+}
+function chosenIdx(ex, mes) {
+  const k = S.block + '|' + mes + '|' + ex.id;
+  if (S.swaps[k] !== undefined) return S.swaps[k];
+  if (S.block <= 1 || ex.main || !ex.alts.length) return 0;
+  return (S.block - 1) % (ex.alts.length + 1);
+}
+function chosenName(ex, mes) { const c = chosenIdx(ex, mes); return c === 0 ? cleanName(ex.name) : ex.alts[c - 1]; }
+
+/* ================= STATE OF THE PLAN ================= */
+function blockSessions() { return S.sessions.filter(s => s.block === S.block); }
+function position() {
+  const n = blockSessions().length;
+  if (n >= BLOCK_LEN) return { done: true, n };
+  const cycle = Math.floor(n / PER) + 1, idx = n % PER;
+  return { done: false, n, cycle, idx, ph: phaseOf(cycle) };
+}
+function lastLogFor(key) {
+  for (let i = S.sessions.length - 1; i >= 0; i--) {
+    const l = S.sessions[i].logs && S.sessions[i].logs[key];
+    if (l && l.sets && l.sets.length) return { log: l, date: S.sessions[i].date, dl: S.sessions[i].dl };
+  }
+  return null;
+}
+function lastNonDeload(key) {
+  for (let i = S.sessions.length - 1; i >= 0; i--) {
+    const s = S.sessions[i]; const l = s.logs && s.logs[key];
+    if (l && l.sets && l.sets.length && !s.dl) return l;
+  }
+  return null;
+}
+function suggestion(ex, name, dl) {
+  const key = normKey(name), p = ex.presc, last = lastNonDeload(key);
+  if (dl) {
+    if (!last) return { kg: '', cls: 'dl', sets: 2, txt: '<b>Descarga:</b> 2 series livianas, RIR 3–4.' };
+    const kg = round05(Math.max(...last.sets.map(s => +s.kg || 0)) * 0.9);
+    return { kg: kg || '', sets: 2, cls: 'dl', txt: `<b>Descarga:</b> 2 series con ${kg} kg (–10%), RIR 3–4. Sin llegar cerca del fallo.` };
+  }
+  if (!last) return { kg: '', sets: p.sets, cls: '', txt: '<b>Primera vez:</b> elegí un peso que te deje 2 reps en reserva en la última serie. Desde la próxima, la app te va guiando.' };
+  const work = last.sets.filter(s => +s.reps > 0);
+  const kg = Math.max(...work.map(s => +s.kg || 0));
+  const top = work.filter(s => (+s.kg || 0) === kg);
+  const allTop = top.length >= p.sets && top.every(s => +s.reps >= p.hi);
+  if (!kg) {
+    const minR = Math.min(...work.map(s => +s.reps));
+    return { kg: '', sets: p.sets, cls: minR >= p.hi ? 'up' : '', txt: minR >= p.hi ? '<b>Subí la dificultad:</b> sumá lastre o pasá a una variante más dura.' : `<b>Objetivo:</b> +1 rep por serie hasta llegar a ${p.hi}.` };
+  }
+  if (allTop) { const nk = kg + incFor(name); return { kg: nk, sets: p.sets, cls: 'up', txt: `<b>¡Subí!</b> Completaste ${p.hi} reps en todas: hoy ${nk} kg (+${incFor(name)}). Arrancá en ${p.lo} reps.` }; }
+  const minR = Math.min(...top.map(s => +s.reps));
+  return { kg, sets: p.sets, cls: '', txt: `<b>Mismo peso: ${kg} kg.</b> Buscá +1 rep, sobre todo en la serie que hiciste ${minR}. Subís cuando hagas ${p.hi} en todas.` };
+}
+
+/* ================= HOY ================= */
+function draftKey(pos) { return S.block + '-' + pos.n; }
+function getDraft(pos) {
+  if (!S.draft || S.draft.key !== draftKey(pos)) S.draft = { key: draftKey(pos), data: {} };
+  return S.draft.data;
+}
+function renderHoy() {
+  const root = document.getElementById('hoy-root');
+  const pos = position();
+  const bs = blockSessions();
+  const last = S.sessions[S.sessions.length - 1];
+  let html = '';
+
+  if (pos.done) {
+    root.innerHTML = `<div class="hoy-head"><div class="hoy-kicker">Bloque ${S.block}</div><div class="hoy-title">¡Bloque <span>terminado!</span></div>
+      <div class="hoy-sub">Completaste los 14 ciclos. Antes de seguir: medite en la balanza, cargá la cintura en 📈 Progreso y pasale los datos a Claude para ajustar calorías y objetivos.</div></div>
+      <div class="card"><div class="tip"><span class="tip-icon">🔁</span><span>El bloque ${S.block + 1} mantiene los básicos (para medir tu fuerza) y rota los accesorios por sus alternativas, así el cuerpo recibe un estímulo nuevo y no te aburrís.</span></div></div>
+      <button class="btn btn-main" data-act="newblock">Empezar bloque ${S.block + 1}</button>`;
+    return;
+  }
+
+  const { cycle, idx, ph } = pos;
+  const exs = sessionExercises(ph.mes, idx);
+  const draft = getDraft(pos);
+
+  // banners
+  if (last && last.date === today()) {
+    html += `<div class="done-banner">✓ <b>Hoy ya entrenaste</b> (S${last.idx + 1} ${SESS_LBL[last.idx]}). ${last.idx === 5 ? 'Terminaste el ciclo: <b>mañana descanso</b>.' : 'Abajo tenés la próxima para cuando vuelvas.'}</div>`;
+  } else if (last) {
+    const gap = daysBetween(last.date, today());
+    if (gap > 2) html += `<div class="alert">Hace ${gap} días que no entrenás. No recuperes lo perdido: hacé la que te toca y seguís desde ahí.</div>`;
+    else if (last.idx === 5 && gap === 1) html += `<div class="done-banner">Ayer cerraste el ciclo: <b>hoy toca descanso</b> o caminata larga. Si ya descansaste, dale con la S1.</div>`;
+  }
+
+  // header
+  let dots = '';
+  for (let i = 0; i < PER; i++) dots += `<div class="cyc-dot ${i < idx ? 'done' : i === idx ? 'now' : ''}"></div>`;
+  let segs = '';
+  for (let c = 1; c <= CYCLES; c++) segs += `<div class="blk-seg ${c < cycle ? 'done' : c === cycle ? 'now' : ''} ${phaseOf(c).dl ? 'dl' : ''}"></div>`;
+  html += `<div class="hoy-head" style="border-left-color:${SESS_COLOR[idx]}">
+    <div class="hoy-kicker">Bloque ${S.block} · Ciclo ${cycle}/${CYCLES} · ${ph.name}</div>
+    <div class="hoy-title">S${idx + 1} · <span style="color:${SESS_COLOR[idx]}">${SESS_LBL[idx]}</span></div>
+    <div class="hoy-sub">${ph.dl ? 'Ciclo de descarga: 2 series por ejercicio, –10% de peso, RIR 3–4.' : 'Completá cada serie y tocá ✓. El peso sugerido ya está cargado.'}</div>
+    <div class="cyc-bar">${dots}</div><div class="blk-bar">${segs}</div></div>`;
+
+  // exercises
+  let ssCount = 0;
+  exs.forEach((ex, n) => {
+    const ci = chosenIdx(ex, ph.mes);
+    const name = chosenName(ex, ph.mes);
+    const key = normKey(name);
+    const sug = suggestion(ex, name, ph.dl);
+    const nSets = sug.sets;
+    const d = draft[ex.id] || (draft[ex.id] = { key, sets: [] });
+    if (d.key !== key) { d.key = key; d.sets = []; }
+    const lastL = lastLogFor(key);
+    const lastTxt = lastL ? `Última vez (${fmtDate(lastL.date)}): ${lastL.log.sets.map(s => (s.kg ? s.kg + '×' : '') + s.reps).join(' · ')}` : '';
+    const ssTag = ex.ss ? `<span class="ss-badge">${/^SS-([A-Z])/i.test(ex.name) ? 'SS-' + ex.name.match(/^SS-([A-Z])/i)[1] : 'SS'}</span>` : '';
+    if (ex.ss) ssCount++;
+    let rows = `<div class="set-row hdr"><span></span><span>kg</span><span>reps</span><span>RIR</span><span></span></div>`;
+    for (let s = 0; s < nSets; s++) {
+      const v = d.sets[s] || {};
+      const kgVal = v.kg !== undefined ? v.kg : (sug.kg !== '' ? sug.kg : '');
+      rows += `<div class="set-row" data-ex="${ex.id}" data-set="${s}">
+        <span class="set-lbl">${s + 1}</span>
+        <input inputmode="decimal" data-f="kg" value="${esc(kgVal)}" placeholder="kg">
+        <input inputmode="numeric" data-f="reps" value="${esc(v.reps || '')}" placeholder="${ph.dl ? ex.presc.lo : ex.presc.lo + '–' + ex.presc.hi}">
+        <input inputmode="numeric" data-f="rir" value="${esc(v.rir !== undefined ? v.rir : '')}" placeholder="${ph.dl ? '3' : ex.main ? '1–2' : '0–1'}">
+        <button class="set-ok ${v.ok ? 'on' : ''}" data-act="ok">✓</button></div>`;
+    }
+    const opts = [cleanName(ex.name), ...ex.alts].map((o, k) => `<option value="${k}" ${k === ci ? 'selected' : ''}>${k === 0 ? 'Plan: ' : 'Alt: '}${esc(o)}</option>`).join('');
+    html += `<div class="log-ex ${ex.ss ? 'ss' : ''}">
+      <div class="log-top"><div class="log-n">${n + 1}</div><div><div class="log-name">${ssTag}${esc(name)}</div><div class="log-presc">${esc(ex.meta)}${ex.presc.fixed ? ' · rango de progresión hasta ' + ex.presc.hi : ''}</div></div>
+      <button class="log-tech" data-act="tech" data-mes="${ph.mes}" data-sess="${SESS[idx]}" data-ex="${ex.id}">Técnica</button></div>
+      <div class="log-hint ${sug.cls}">${sug.txt}</div>
+      ${lastTxt ? `<div class="log-last">${esc(lastTxt)}</div>` : ''}
+      ${rows}
+      ${ex.alts.length ? `<select class="swap-sel" data-act="swap" data-mes="${ph.mes}" data-ex="${ex.id}">${opts}</select>` : ''}
+    </div>`;
+  });
+  if (ssCount) html = html.replace('<div class="log-ex', `<div class="tip"><span class="tip-icon">🟠</span><span>Los marcados SS van en superserie: hacés el par sin descanso y después descansás 75 seg.</span></div><div class="log-ex`);
+
+  html += `<button class="btn btn-main" data-act="finish">Terminar sesión S${idx + 1} ✓</button>`;
+  if (bs.length) html += `<button class="btn btn-ghost" data-act="undo">Deshacer última sesión cargada</button>`;
+  html += `<div style="font-size:11px;color:var(--blanco-suave);margin-top:14px;line-height:1.5">Tus registros se guardan en este navegador. Si instalaste la app en la pantalla de inicio, usá siempre ese ícono (Safari aparte guarda otros datos). Hacé un backup cada tanto desde 📈 Progreso.</div>`;
+  save();
+  root.innerHTML = html;
+}
+
+function collect(pos) {
+  const ph = pos.ph, exs = sessionExercises(ph.mes, pos.idx), draft = getDraft(pos), logs = {};
+  exs.forEach(ex => {
+    const name = chosenName(ex, ph.mes), key = normKey(name), d = draft[ex.id];
+    if (!d) return;
+    const sets = d.sets.filter(s => s && +s.reps > 0).map(s => ({ kg: s.kg === '' || s.kg === undefined ? '' : +s.kg, reps: +s.reps, rir: s.rir === '' || s.rir === undefined ? '' : +s.rir }));
+    if (sets.length) logs[key] = { name, sets, main: ex.main };
+  });
+  return logs;
+}
+
+document.addEventListener('input', e => {
+  const row = e.target.closest('.set-row[data-ex]');
+  if (!row) return;
+  const pos = position(); if (pos.done) return;
+  const d = getDraft(pos)[row.dataset.ex]; if (!d) return;
+  const s = +row.dataset.set; d.sets[s] = d.sets[s] || {};
+  row.querySelectorAll('input[data-f]').forEach(inp => { d.sets[s][inp.dataset.f] = inp.value.replace(',', '.'); });
+  save();
 });
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(r => r || fetch(e.request))
-  );
+document.addEventListener('change', e => {
+  if (e.target.dataset.act === 'swap') {
+    S.swaps[S.block + '|' + e.target.dataset.mes + '|' + e.target.dataset.ex] = +e.target.value;
+    save(); renderHoy();
+  }
 });
-`;
-  const blob = new Blob([swCode], {type: 'application/javascript'});
-  const swUrl = URL.createObjectURL(blob);
-  navigator.serviceWorker.register(swUrl).catch(()=>{});
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  const act = b.dataset.act;
+  if (act === 'ok') {
+    const row = b.closest('.set-row'); const pos = position();
+    const d = getDraft(pos)[row.dataset.ex]; const s = +row.dataset.set;
+    d.sets[s] = d.sets[s] || {};
+    const repsIn = row.querySelector('[data-f=reps]'), kgIn = row.querySelector('[data-f=kg]'), rirIn = row.querySelector('[data-f=rir]');
+    if (!repsIn.value) { const m = repsIn.placeholder.match(/\d+/); if (m) repsIn.value = m[0]; }
+    d.sets[s].reps = repsIn.value; d.sets[s].kg = kgIn.value.replace(',', '.'); d.sets[s].rir = rirIn.value;
+    d.sets[s].ok = !d.sets[s].ok; b.classList.toggle('on', d.sets[s].ok);
+    save();
+  } else if (act === 'tech') {
+    showSection(b.dataset.mes); showDay(b.dataset.mes, b.dataset.sess);
+    const el = document.getElementById(b.dataset.ex);
+    if (el) { el.classList.add('open'); setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120); }
+  } else if (act === 'finish') {
+    const pos = position(); if (pos.done) return;
+    const logs = collect(pos);
+    if (!Object.keys(logs).length && !confirm('No cargaste ninguna serie. ¿Marcar la sesión como hecha igual?')) return;
+    S.sessions.push({ block: S.block, n: pos.n, idx: pos.idx, cycle: pos.cycle, mes: pos.ph.mes, dl: pos.ph.dl, date: today(), logs });
+    S.draft = null; save();
+    toast(`S${pos.idx + 1} ${SESS_LBL[pos.idx]} guardada 💪`);
+    renderHoy(); window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else if (act === 'undo') {
+    const bs = blockSessions(); if (!bs.length) return;
+    const l = bs[bs.length - 1];
+    if (!confirm(`¿Borrar la S${l.idx + 1} ${SESS_LBL[l.idx]} del ${fmtDate(l.date)}?`)) return;
+    S.sessions.splice(S.sessions.lastIndexOf(l), 1); S.draft = null; save(); renderHoy();
+  } else if (act === 'newblock') {
+    S.block++; S.draft = null; save(); renderHoy();
+  } else if (act === 'addm') {
+    const g = id => { const v = document.getElementById(id).value.replace(',', '.'); return v === '' ? null : +v; };
+    const m = { date: document.getElementById('m-date').value || today(), peso: g('m-peso'), grasa: g('m-grasa'), visceral: g('m-visc'), musculo: g('m-musc'), cintura: g('m-cint') };
+    if ([m.peso, m.grasa, m.visceral, m.musculo, m.cintura].every(v => v === null)) { toast('Cargá al menos un dato'); return; }
+    S.measures.push(m); S.measures.sort((a, b) => a.date.localeCompare(b.date)); save(); toast('Medición guardada'); renderProg(); updateHero();
+  } else if (act === 'delm') {
+    const i = +b.dataset.i; if (!confirm('¿Borrar esta medición?')) return;
+    S.measures.splice(i, 1); save(); renderProg(); updateHero();
+  } else if (act === 'export') {
+    const blob = new Blob([JSON.stringify(S, null, 1)], { type: 'application/json' });
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'entrenador-backup-' + today() + '.json';
+    document.body.appendChild(a); a.click(); a.remove();
+  } else if (act === 'import') {
+    document.getElementById('imp-file').click();
+  }
+});
+document.addEventListener('change', e => {
+  if (e.target.id !== 'imp-file' || !e.target.files[0]) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try { const d = JSON.parse(r.result); if (!Array.isArray(d.sessions)) throw 0; if (!confirm('Esto reemplaza los datos actuales por los del backup. ¿Seguir?')) return; S = d; load_fix(); save(); toast('Backup restaurado'); renderProg(); updateHero(); }
+    catch (err) { toast('Archivo inválido'); }
+  };
+  r.readAsText(e.target.files[0]);
+});
+function load_fix() { ['sessions', 'measures'].forEach(k => { if (!Array.isArray(S[k])) S[k] = []; }); if (!S.swaps) S.swaps = {}; if (!S.block) S.block = 1; }
+
+/* ================= PROGRESO ================= */
+function spark(vals, color) {
+  const pts = vals.map((v, i) => [i, v]).filter(p => p[1] !== null && !isNaN(p[1]));
+  if (!pts.length) return '';
+  const W = 300, H = 70, P = 8;
+  const ys = pts.map(p => p[1]); let mn = Math.min(...ys), mx = Math.max(...ys);
+  if (mx - mn < 0.001) { mn -= 1; mx += 1; }
+  const nx = Math.max(vals.length - 1, 1);
+  const xy = pts.map(([i, v]) => [P + (W - 2 * P) * (vals.length === 1 ? 0.5 : i / nx), H - P - (H - 2 * P) * (v - mn) / (mx - mn)]);
+  const line = xy.map(p => p.map(n => n.toFixed(1)).join(',')).join(' ');
+  const dotsSvg = xy.map((p, k) => `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="${k === xy.length - 1 ? 4 : 2.5}" fill="${color}"/>`).join('');
+  return `<svg class="chart-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><polyline points="${line}" fill="none" stroke="${color}" stroke-width="2" vector-effect="non-scaling-stroke"/>${dotsSvg}</svg>`;
 }
+function metricCard(label, unit, vals, lowerBetter, color, dec = 1) {
+  const real = vals.filter(v => v !== null && v !== undefined);
+  if (!real.length) return '';
+  const lastV = real[real.length - 1], first = real[0], dlt = lastV - first;
+  const good = lowerBetter ? dlt < 0 : dlt > 0;
+  const dTxt = real.length > 1 && Math.abs(dlt) > 0.001 ? `<span class="chart-delta ${good ? 'delta-good' : 'delta-bad'}">${dlt > 0 ? '+' : ''}${dlt.toFixed(dec)}${unit}</span>` : '';
+  return `<div class="card chart-wrap"><div class="chart-head"><span class="chart-name">${label}</span><span><span class="chart-val">${lastV.toFixed(dec)}${unit}</span>${dTxt}</span></div>${spark(vals, color)}</div>`;
+}
+function renderProg() {
+  const root = document.getElementById('prog-root');
+  const M = S.measures;
+  const col = k => M.map(m => (m[k] === null || m[k] === undefined || m[k] === '') ? null : +m[k]);
+  let html = `<div class="section-title">Mediciones</div>
+  <div class="card"><div class="card-header"><div class="card-icon icon-verde">⚖️</div><div><div class="card-title">Nueva medición</div><div class="card-subtitle">Cada 2 semanas, en ayunas, misma balanza. Cintura a la altura del ombligo.</div></div></div>
+  <div class="form-grid">
+    <label>Fecha<input type="date" id="m-date" value="${today()}"></label>
+    <label>Peso (kg)<input id="m-peso" inputmode="decimal" placeholder="76.1"></label>
+    <label>Grasa (%)<input id="m-grasa" inputmode="decimal" placeholder="25.9"></label>
+    <label>Grasa visceral<input id="m-visc" inputmode="decimal" placeholder="12"></label>
+    <label>Músculo esquelético (kg)<input id="m-musc" inputmode="decimal" placeholder="29.3"></label>
+    <label>Cintura (cm)<input id="m-cint" inputmode="decimal" placeholder="—"></label>
+  </div><button class="btn btn-main" data-act="addm">Guardar medición</button></div>`;
+  html += metricCard('Grasa visceral', '', col('visceral'), true, '#e63946', 0)
+    + metricCard('Cintura', ' cm', col('cintura'), true, '#f4a261')
+    + metricCard('Grasa corporal', '%', col('grasa'), true, '#f4a261')
+    + metricCard('Peso', ' kg', col('peso'), true, '#7ab4d4')
+    + metricCard('Músculo esquelético', ' kg', col('musculo'), false, '#3ecfbf');
+  const visc = col('visceral').filter(v => v !== null);
+  if (visc.length) html += `<div class="tip"><span class="tip-icon">🎯</span><span>Visceral: referencia &lt;11. ${visc[visc.length - 1] < 11 ? '<b>¡Ya estás en rango!</b>' : 'Te faltan ' + (visc[visc.length - 1] - 10) + ' puntos para entrar en rango.'}</span></div>`;
+
+  // strength
+  const mains = {};
+  S.sessions.forEach(s => Object.entries(s.logs || {}).forEach(([k, l]) => {
+    if (!l.main) return;
+    const best = Math.max(...l.sets.map(x => (+x.kg || 0) * (1 + (+x.reps) / 30)));
+    if (!best) return;
+    (mains[k] = mains[k] || { name: l.name, vals: [] }).vals.push(best);
+  }));
+  const mk = Object.values(mains);
+  html += `<div class="section-title" style="margin-top:18px">Fuerza</div>`;
+  if (!mk.length) html += `<div class="card" style="font-size:13px;color:var(--blanco-suave)">Cuando registres los ejercicios principales vas a ver acá tu 1RM estimado en el tiempo. En déficit, mantenerlo ya es ganar.</div>`;
+  else mk.forEach(m => { html += metricCard(m.name + ' · 1RM est.', ' kg', m.vals, false, '#3ecfbf'); });
+
+  // history
+  const hist = S.sessions.slice(-12).reverse();
+  html += `<div class="section-title" style="margin-top:18px">Últimas sesiones</div><div class="card">`;
+  html += hist.length ? hist.map(s => `<div class="hist-row"><span>S${s.idx + 1} · ${SESS_LBL[s.idx]}${s.dl ? ' (descarga)' : ''}</span><span>B${s.block} · C${s.cycle} · ${fmtDate(s.date)}</span></div>`).join('') : '<div style="font-size:13px;color:var(--blanco-suave)">Todavía no cargaste sesiones.</div>';
+  html += `</div>`;
+
+  html += `<div class="section-title" style="margin-top:18px">Historial de mediciones</div><div class="card">` +
+    M.map((m, i) => `<div class="hist-row"><span>${fmtDate(m.date)} · ${[m.peso && m.peso + ' kg', m.grasa && m.grasa + '%', m.visceral && 'visc ' + m.visceral, m.cintura && m.cintura + ' cm'].filter(Boolean).join(' · ')}</span><span><button class="mini-link" data-act="delm" data-i="${i}">borrar</button></span></div>`).reverse().join('') + `</div>`;
+
+  html += `<div class="section-title" style="margin-top:18px">Backup</div><div class="card"><div style="font-size:13px;color:var(--blanco-suave)">Los datos viven en este navegador. Bajate un backup cada tanto; si cambiás de celular lo restaurás desde acá.</div>
+    <button class="btn btn-sec" data-act="export">⬇️ Descargar backup</button><button class="btn btn-ghost" data-act="import">⬆️ Restaurar backup</button><input type="file" id="imp-file" accept="application/json,.json" style="display:none"></div>`;
+  root.innerHTML = html;
+}
+
+function updateHero() {
+  const g = S.measures.filter(m => m.grasa !== null && m.grasa !== undefined).slice(-1)[0];
+  const p = S.measures.filter(m => m.peso !== null && m.peso !== undefined).slice(-1)[0];
+  if (g) {
+    document.getElementById('hero-now-bf').innerHTML = (+g.grasa).toFixed(1) + '<span class="stat-unit">%</span>';
+    document.getElementById('hero-now-diff').textContent = '▲ ' + (g.grasa - RECORD_BF).toFixed(1) + '%';
+  }
+  if (p) document.getElementById('hero-now-kg').textContent = (+p.peso).toFixed(1) + ' kg';
+}
+
+/* ================= INIT ================= */
+load();
+updateHero();
+renderHoy();
+
 </script>
 </body></html>
